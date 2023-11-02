@@ -1,0 +1,6 @@
+{
+    "Name": "estado-sc",
+	"EventBusName": "core",
+    "EventPattern": "{\"source\": [\"com.contratoja.contrato\"],\"detail-type\": [\"contratoJa.contrato.ContratoCriado\"],\"detail\": {\"data\": {\"uf\": [\"SC\"]}}}",    
+    "State": "ENABLED"
+}

@@ -1,0 +1,53 @@
+version: "3.3"
+
+services:
+  localstack:
+    container_name: "${LOCALSTACK_DOCKER_NAME-localstack_main}"
+    image: localstack/localstack
+    ports:
+      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+      - "127.0.0.1:4510-4559:4510-4559"  # external services port range
+    environment:
+      - DEBUG=${DEBUG-}
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - contratonet
+      
+  mockoon:
+    image: mockoon/cli:latest
+    command: [ "--data", "data", "--port", "3000" ]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./mockoon.json:/data
+    networks:
+      - contratonet
+      
+  integra-rj:
+    build: integra-rj
+    ports:
+      - "9091:9091"
+    environment:
+      SERVER_PORT: 9091
+      SISTEMA_ESTADO_RJ: http://mockoon:3000
+      SQS_ENDPOINT: http://localhost:4510/000000000000/fila-rj
+    networks:
+      - contratonet
+      
+  integra-sc:
+    build: integra-sc
+    ports:
+      - "9092:9092"
+    environment:
+      SERVER_PORT: 9092
+      SISTEMA_ESTADO_SC: http://mockoon:3000
+      SQS_ENDPOINT: http://localhost:4510/000000000000/fila-sc
+    networks:
+      - contratonet
+
+networks:
+  contratonet:
+    driver: bridge

@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "c1013c49-d14a-4451-b2b5-11138d5ba088",
+		"name": "Poc contratoJa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30889732"
+	},
+	"item": [
+		{
+			"name": "Cria contrato",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"e2d322bf-77a5-4451-8c7b-336a7ce01107\",\r\n    \"amount\": 5000.01,\r\n    \"installments\": 5,\r\n    \"uf\": \"RJ\",\r\n    \"customer\": {\r\n        \"firstName\": \"Roberto\",\r\n        \"lastName\": \"Picanço\"\r\n    },\r\n    \"seller\": \"João da Silva\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALSTACK_ENDPOINT}}/restapis/{{REST_API_ID}}/test/_user_request_/contratos",
+					"host": [
+						"{{LOCALSTACK_ENDPOINT}}"
+					],
+					"path": [
+						"restapis",
+						"{{REST_API_ID}}",
+						"test",
+						"_user_request_",
+						"contratos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

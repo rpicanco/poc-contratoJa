@@ -1,0 +1,10 @@
+{
+    "Rule": "estado-sc",
+    "EventBusName": "core",
+    "Targets": [{
+            "Id": "1",
+            "Arn": "arn:aws:sqs:us-east-1:000000000000:fila-sc",
+			"InputPath": "$.detail"
+        }
+    ]
+}

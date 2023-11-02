@@ -1,0 +1,16 @@
+server:
+  port: 9091
+
+spring:
+  cloud:
+    aws:
+      region:
+        static: us-east-1
+      credentials:
+        access-key: test
+        secret-key: test
+      sqs:
+        endpoint: ${SQS_ENDPOINT:http://localhost:4566/000000000000/fila-sc}
+
+sistemaEstadoRJ:
+  url: ${SISTEMA_ESTADO_SC:http://localhost:3000}

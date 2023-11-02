@@ -1,0 +1,18 @@
+{
+  "name": "contrato",
+  "version": "1.0.0",
+  "description": "Função de criação de contrato",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roberto Picanço",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-eventbridge": "^3.430.0",
+    "cloudevents": "^8.0.0",
+    "joi": "^17.11.0",
+    "uuid": "^9.0.1"
+  }
+}

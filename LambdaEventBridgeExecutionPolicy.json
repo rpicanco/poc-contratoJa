@@ -1,0 +1,30 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CloudWatchLogGroupCreation",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:us-east-1:000000000000:*"
+        },
+        {
+            "Sid": "CloudWatchLogActions",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:us-east-1:000000000000:log-group:/aws/lambda/contrato:*"
+            ]
+        },
+        {
+            "Sid": "EventBridgeActions",
+            "Effect": "Allow",
+            "Action": [
+                "events:PutEvents"
+            ],
+            "Resource": "arn:aws:events:us-east-1:000000000000:*"
+        }
+    ]
+}

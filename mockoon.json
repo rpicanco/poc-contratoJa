@@ -1,0 +1,138 @@
+{
+  "uuid": "5a067542-06d0-4eec-8d08-4d6e79cd0a57",
+  "lastMigration": 28,
+  "name": "Contrato API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "5c6d1020-deaa-4467-9e2f-f8637d13bce2",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "rj/contratos",
+      "responses": [
+        {
+          "uuid": "19137b55-6031-490b-8b9e-e56d36c8d9ef",
+          "body": "{\"registroId\" : {{guid}}}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "lul3",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "acbfe01f-3dbd-46a7-8ad4-1110982cffaa",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "2d3a84af-53e6-4ee6-b6aa-04ee7e9ecd37",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "sc/contratos",
+      "responses": [
+        {
+          "uuid": "87776375-75cf-48c1-a328-808854d0242d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "lul3",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "5c6d1020-deaa-4467-9e2f-f8637d13bce2"
+    },
+    {
+      "type": "route",
+      "uuid": "2d3a84af-53e6-4ee6-b6aa-04ee7e9ecd37"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "4425a090-5ffe-43c9-9f37-071a22487acc",
+      "id": "lul3",
+      "name": "Contrato",
+      "documentation": "",
+      "value": "{\n  \"registroId\": \"{{guid}}\"\n}"
+    }
+  ]
+}
