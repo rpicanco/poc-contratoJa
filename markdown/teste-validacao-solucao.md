@@ -6,9 +6,9 @@ Testar e validar a solução através da coleção do _Postman_. É necessário 
 
 ## Teste
 
-1. Importe a coleção _Poc contratoJa.postman_collection.json_ e variável de ambiente _Localstack.postman_environment.json_ da pasta _postman_ no **Postman**. 
+1. Importe no **postman** a coleção _Poc contratoJa.postman_collection.json_ e variável de ambiente _Localstack.postman_environment.json_ da pasta _postman_. 
 
-2. Recuperar o `rest-api-id` gerado na criação do AWS API Gateway de contrato.
+2. No terminal, recuperar o `rest-api-id` gerado na criação do AWS API Gateway de contrato.
 
 ```
 sudo make get-rest-api-id
@@ -51,4 +51,4 @@ make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUM
 
 :heavy_check_mark: Se apareceu o texto, sucesso.
 
-:loudspeaker: Quando for um contrado do `RJ`, o microsserviço a ser executado é o `integra-rj`. Já se for um contrato de `SC`, o microsserviço a ser executado é o `integra-sc`. 
+:loudspeaker: Quando for um contrado celebrado do `RJ`, o microsserviço a ser executado é o `integra-rj`. Já se for um contrato celebrado em `SC`, o microsserviço a ser executado é o `integra-sc`. 
