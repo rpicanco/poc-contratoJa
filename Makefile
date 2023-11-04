@@ -14,8 +14,7 @@ build:
 	@$(COMMAND)
 	@$(foreach microservice,$(MS_LIST),$(call EXECUTE_COMMAND,'build',$(microservice),))
 	
-start:
-	@$(COMMAND)
+start:	
 	@$(foreach microservice,$(MS_LIST), $(docker-compose up -d --build $(microservice)))
 	
 stop:
