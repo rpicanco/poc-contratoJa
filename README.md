@@ -26,7 +26,7 @@ Prova de conceito referente ao artigo "Simplificando e reduzindo o custo da solu
 	</li>
 	<ul>
       <li>
-        <a href="/passo-a-passo.md">Passo a passo</a>
+        <a href="/markdown/passo-a-passo.md">Passo a passo</a>
       </li>	  
 	</ul>
   </ol>
