@@ -51,7 +51,7 @@ sudo make build-start
 3. Verificar se a solução está rodando
 
 ```
-docker-ps
+docker ps
 ```
 
 <img src="/imagens/build-start-sucesso.png">
