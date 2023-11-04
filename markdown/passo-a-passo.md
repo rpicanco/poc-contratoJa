@@ -8,4 +8,4 @@
 
 :two: <a href="build-deploy-solucao.md">Build & Deploy da solução</a>
 
-:three: <a href="validacao-teste-solucao.md">Validação & teste</a>
+:three: <a href="teste-validacao-solucao.md">Teste & validação</a>
