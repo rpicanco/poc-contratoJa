@@ -28,6 +28,9 @@ build-start:
 	make build
 	make start
 
+get-api-id:	
+	awslocal apigateway get-rest-apis --query 'items[0].id' --output text
+	
 destroy:
 	make stop
 	docker-compose rm -f

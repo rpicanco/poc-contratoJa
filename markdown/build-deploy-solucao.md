@@ -50,7 +50,9 @@ sudo make build-start
 
 3. Verificar se a solução está rodando
 
-:point_right: Aparecerá apenas log do tipo _INFO_ e no final a lista dos componentes/containers inicializados e prontos para serem utilizados.
+```
+docker-ps
+```
 
 <img src="/imagens/build-start-sucesso.png">
 
