@@ -15,7 +15,7 @@ build:
 	@$(foreach microservice,$(MS_LIST),$(call EXECUTE_COMMAND,'build',$(microservice),))
 	
 start:	
-	@$(foreach microservice,$(MS_LIST), $(docker-compose up -d --build $(microservice)))
+	docker-compose up -d --build integra-rj integra-sc
 	
 stop:
 	docker-compose stop
