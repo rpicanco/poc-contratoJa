@@ -16,12 +16,16 @@ build:
 	
 start:
 	@$(COMMAND)
-	docker-compose up -d --build @$(foreach microservice,$(MS_LIST))
+	@$(foreach microservice,$(MS_LIST), $(docker-compose up -d --build $(microservice)))
 	
 stop:
 	docker-compose stop
+	
+start-mockoon:
+	docker-compose up -d mockoon
 
 build-start:
+	make start-mockoon
 	make build
 	make start
 
