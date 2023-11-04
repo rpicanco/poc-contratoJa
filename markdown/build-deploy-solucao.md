@@ -6,23 +6,41 @@
 
 ## Clone do projeto do Github
 
-**Objetivo**: Baixar o código fonte do capítulo 10 do _Github_ para o seu ambiente local _Linux_.
+**Objetivo**: Baixar o código fonte da Poc ContratoJá no repositório do _Github_ para o seu ambiente local _Linux_.
 
 1. Faça o clone do projeto em alguma pasta de sua preferência. Por exemplo, `/opt`
 
 ```
-sudo git clone https://github.com/rpicanco/livro-eda.git
+sudo git clone https://github.com/rpicanco/poc-contratoJa.git
 ``` 
 
-2. Entre na pasta **/cap10/src/ecommerce**.
+2. Entre na pasta raiz do repositório.
 
 ## Build e deploy da solução
 
-**Objetivo**: Contruir e deployar todos os componentes da solução no seu ambiente local _Linux_.
+**Objetivo**: Contruir e deployar todos os componentes da solução no seu ambiente local _Linux_ usando o **Localstack**.
 
-1. Entre na pasta onde está o código fonte baixado do _Github_ (**/cap10/src/ecommerce**)
+1. Inicializar o **Localstack**
 
-2. Realizar o build e inicialização dos componentes através do _Make_
+```
+sudo make start-localstack
+```
+
+2. Verifique se o container do localstack foi inicializado com sucesso
+
+```
+docker ps
+```
+
+:loudspeaker: O status do container tem que estar **Up XX seconds (healthy)**.
+
+3. Montar toda a stack necessária com os serviços da AWS utilizando o **Localstack** através do _Make_
+
+```
+sudo make monta-localstack-env
+```
+
+4. Construir e deployar os microserviços `integra-rj` e `integra-sc`.
 
 ```
 sudo make build-start
@@ -34,8 +52,8 @@ sudo make build-start
 
 :point_right: Aparecerá apenas log do tipo _INFO_ e no final a lista dos componentes/containers inicializados e prontos para serem utilizados.
 
-<img src="/cap10/imagens/build-start-sucesso.png">
+<img src="/imagens/build-start-sucesso.png">
 
-:point_right: Além dos microsserviços que contemplam a solução, temos o _rabbitmq_ (https://rabbitmq.com/), que é nossa solução de broker de eventos, o _mockoon_ (https://mockoon.com/), que é a nossa solução de mock para REST API para simular o gateway de pagamento e temos o _mongo_ (https://www.mongodb.com/), que é nossa solução de banco de dados NoSQL.
+:point_right: Além dos containers dos microsserviços e do localstack, temos o container do _mockoon_ (https://mockoon.com/), que é a nossa solução de mock para REST API para simular o sistema dos estados.
 
 :loudspeaker: Se tudo estiver ok, a solução estará pronta para ser testada no _postman_.
