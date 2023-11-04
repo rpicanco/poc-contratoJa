@@ -28,7 +28,7 @@ build-start:
 	make build
 	make start
 
-get-api-id:	
+get-rest-api-id:	
 	awslocal apigateway get-rest-apis --query 'items[0].id' --output text
 	
 destroy:

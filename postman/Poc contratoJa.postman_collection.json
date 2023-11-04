@@ -7,7 +7,20 @@
 	},
 	"item": [
 		{
-			"name": "Cria contrato",
+			"name": "Criar contrato RJ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 202\", function () {\r",
+							"    pm.response.to.have.status(202);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -19,7 +32,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"number\": \"e2d322bf-77a5-4451-8c7b-336a7ce01107\",\r\n    \"amount\": 5000.01,\r\n    \"installments\": 5,\r\n    \"uf\": \"RJ\",\r\n    \"customer\": {\r\n        \"firstName\": \"Roberto\",\r\n        \"lastName\": \"Picanço\"\r\n    },\r\n    \"seller\": \"João da Silva\"\r\n}",
+					"raw": "{\r\n    \"number\": \"{{$guid}}\",\r\n    \"amount\": 5000.01,\r\n    \"installments\": 5,\r\n    \"uf\": \"RJ\",\r\n    \"customer\": {\r\n        \"firstName\": \"Roberto\",\r\n        \"lastName\": \"Picanço\"\r\n    },\r\n    \"seller\": \"João da Silva\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,10 +56,51 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Criar contrato SC",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 202\", function () {\r",
+							"    pm.response.to.have.status(202);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"{{$guid}}\",\r\n    \"amount\": 5000.01,\r\n    \"installments\": 5,\r\n    \"uf\": \"SC\",\r\n    \"customer\": {\r\n        \"firstName\": \"Roberto\",\r\n        \"lastName\": \"Picanço\"\r\n    },\r\n    \"seller\": \"João da Silva\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALSTACK_ENDPOINT}}/restapis/{{REST_API_ID}}/test/_user_request_/contratos",
+					"host": [
+						"{{LOCALSTACK_ENDPOINT}}"
+					],
+					"path": [
+						"restapis",
+						"{{REST_API_ID}}",
+						"test",
+						"_user_request_",
+						"contratos"
+					]
+				}
 			},
 			"response": []
 		}
