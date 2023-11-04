@@ -32,7 +32,7 @@ sudo make start-localstack
 docker ps
 ```
 
-:loudspeaker: O status do container tem que estar **Up XX seconds (healthy)**.
+:loudspeaker: Aguarde o status do container ficar: **Up XX seconds (healthy)**.
 
 3. Montar toda a stack necessária com os serviços da AWS utilizando o **Localstack** através do _Make_
 
