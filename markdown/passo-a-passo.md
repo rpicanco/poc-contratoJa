@@ -1,6 +1,6 @@
 <h1>ContratoJá</h1>
 
-> :watch: Tempo estimado de execução: XX minutos.
+> :watch: Tempo estimado de execução: 15 minutos.
 
 ### Passos
 
@@ -8,4 +8,4 @@
 
 :two: <a href="build-deploy-solucao.md">Build & Deploy da solução</a>
 
-:three: <a href="teste-validacao-solucao.md">Teste & validação</a>
+:three: <a href="teste-validacao-solucao.md">Teste & Validação da solução</a>
