@@ -2,15 +2,13 @@
 
 Caso você esteja usando o sistema operacional _Windows_, você pode rodar um ambiente do sistema operacional _Linux_ (_Ubuntu_) dentro do _Windows_ para executar os comandos. 
 
-### Baixar e instalar o Windows Subsystem for Linux (WSL) no Microsoft Store
+### Instalar o WSL2 e Ubuntu pelo powershell
 
-1. Acesse o site da Microsoft Store e siga o passo a passo de instalação do _Windows Subsystem for Linux (WSL)_
-	* https://apps.microsoft.com/store/detail/windows-subsystem-for-linux/9P9TQF7MRM4R
+1. No Powershell, execute o comando a seguir:
 
-### Baixar e instalar o Ubuntu do WSL no Microsoft Store
-
-1. Acesse o site da Microsoft Store e siga o passo a passo de instalação do _Ubuntu_ do WSL
-	* https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?hl=pt-br&gl=br&rtc=1
+```
+wsl --install
+```
 
 ### Configure um usuário e senha para o ambiente Linux (Ubuntu)
 

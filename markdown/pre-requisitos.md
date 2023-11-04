@@ -24,8 +24,6 @@
 
 ### Docker
 
-Referência: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
-
 1. Instalar o Docker
 
 ```
@@ -80,7 +78,7 @@ sudo docker run hello-world
 >
 > **Referência**:
 > 
-> Docker install <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository"></a>
+> https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 >
 
 ### Docker Compose
@@ -152,7 +150,7 @@ sudo apt install python3-pip
 pip install awscli-local
 ```
 
-2. Copiar a pasta `.aws` com os arquivos `config.txt` e `credentials.txt` na pasta _/home/<<seu_usuário>>_
+2. Copiar a pasta `.aws` com os arquivos `config.txt` e `credentials.txt` na pasta _/home/<<seu_usuário>>/_
                           
 ### Ambiente de execução
 
