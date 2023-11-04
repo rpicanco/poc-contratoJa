@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Lambda
 
 # 1 - Criar a policy, role e associar a policy a role para dar permissão para a Lambda publicar no barramento do Event Bridge core
@@ -13,12 +15,8 @@ awslocal iam create-role \
 awslocal iam attach-role-policy \
 	--role-name LambdaEventBridgeExecutionRole \
 	--policy-arn arn:aws:iam::000000000000:policy/LambdaEventBridgeExecutionPolicy
-	
-# 2 - Criar o arquivo ZIP do código fonte da Lambda
 
-(cd contrato && zip -r ../contrato.zip .)
-
-# 3 - Criar a Lambda
+# 2 - Criar a Lambda
 
 awslocal lambda create-function \
   --function-name contrato \
@@ -30,30 +28,19 @@ awslocal lambda create-function \
 
 ## API Gateway
   
-# 4 - Criar a API de contrato no AWS APIGateway
+# 3 - Criar a API de contrato no AWS APIGateway
 
-rest-api-id=$(awslocal apigateway create-rest-api \
-	--name 'API de contrato' \
-	--query 'id' \
-	--output text)
+rest-api-id=$(awslocal apigateway create-rest-api --name 'API de contrato' --query 'id' --output text)
 	
-# 5 - Buscar a API de contrato recém criada para pegar o Parent_ID
+# 4 - Buscar a API de contrato recém criada para pegar o Parent_ID
 
-parent-id=$(awslocal apigateway get-resources \
-	--rest-api-id $rest-api-id \
-	--query 'items[0].id' \
-	--output text)
+parent-id=$(awslocal apigateway get-resources --rest-api-id $rest-api-id --query 'items[0].id' --output text)
 
-# 6 - Criar o recurso e associar a API de contratos
+# 5 - Criar o recurso e associar a API de contratos
 
-resource-id=$(awslocal apigateway create-resource \
-  --rest-api-id $rest-api-id \
-  --parent-id $parent-id \
-  --path-part "contratos" \
-  --query 'id' \
-  --output text)
+resource-id=$(awslocal apigateway create-resource --rest-api-id $rest-api-id --parent-id $parent-id --path-part "contratos" --query 'id' --output text)
   
-# 7 - Criar o método POST para o recurso
+# 6 - Criar o método POST para o recurso
 
 awslocal apigateway put-method \
   --rest-api-id $rest-api-id \
@@ -61,7 +48,7 @@ awslocal apigateway put-method \
   --http-method POST \
   --authorization-type "NONE"
   
-# 8 - Integra o método POST ao lambda
+# 7 - Integra o método POST ao lambda
 
 awslocal apigateway put-integration \
   --rest-api-id $rest-api-id \
@@ -72,7 +59,7 @@ awslocal apigateway put-integration \
   --uri arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:000000000000:function:contrato/invocations \
   --passthrough-behavior WHEN_NO_MATCH
   
-# 9 - Cria o deployment
+# 8 - Cria o deployment
 
 awslocal apigateway create-deployment \
   --rest-api-id $rest-api-id \
@@ -80,7 +67,7 @@ awslocal apigateway create-deployment \
   
 ## SQS
 
-# 10 - Criar a fila-rj e fila-sc
+# 9 - Criar a fila-rj e fila-sc
 
 awslocal sqs create-queue \
 	--queue-name fila-rj
@@ -90,12 +77,12 @@ awslocal sqs create-queue \
 
 ## EventBridge
 
-# 11 - Criar o barramento core no EventBridge
+# 10 - Criar o barramento core no EventBridge
 
 awslocal events create-event-bus \
 	--name core
 
-# 12 - Criar as regras para cada estado
+# 11 - Criar as regras para cada estado
 
 awslocal events put-rule \
 	--cli-input-json file://EstadoRJRule.json
@@ -103,7 +90,7 @@ awslocal events put-rule \
 awslocal events put-rule \
 	--cli-input-json file://EstadoSCRule.json
 
-# 13 - Adicionar as permissões para o EventBridge publicar nas filas SQS
+# 12 - Adicionar as permissões para o EventBridge publicar nas filas SQS
 
 awslocal sqs add-permission \
     --queue-url http://localhost:4566/000000000000/fila-rj \
@@ -117,7 +104,7 @@ awslocal sqs add-permission \
     --actions 'SendMessage' \
     --aws-account-ids events.amazonaws.com
 	
-# 14 - Adicionar os targets para cada fila SQS
+# 13 - Adicionar os targets para cada fila SQS
 
 awslocal events put-targets \
 	--cli-input-json file://FilaRJSQStarget.json
