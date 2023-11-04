@@ -151,6 +151,12 @@ pip install awscli-local
 ```
 
 2. Copiar a pasta `.aws` com os arquivos `config.txt` e `credentials.txt` na pasta _/home/<<seu_usuário>>/_
+
+>
+> **Referência**:
+> 
+> https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal
+>
                           
 ### Ambiente de execução
 
