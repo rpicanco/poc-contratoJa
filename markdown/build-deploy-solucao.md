@@ -65,3 +65,5 @@ make show-logs
 ```
 
 :loudspeaker: Se tudo estiver ok, a solução estará pronta para ser testada no _postman_.
+
+:loudspeaker: Digite `CTRL + C` para sair do arquivo de log.

@@ -40,6 +40,7 @@ make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUM
 
 :heavy_check_mark: Se apareceu o texto, sucesso.
 
+:loudspeaker: Digite `CTRL + C` para sair do arquivo de log.
 
 ### Cenário 2: Contrato celebrado em SC
 
@@ -50,6 +51,8 @@ make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUM
 ```
 
 :heavy_check_mark: Se apareceu o texto, sucesso.
+
+:loudspeaker: Digite `CTRL + C` para sair do arquivo de log.
 
 :loudspeaker: Quando for um contrado celebrado do `RJ`, o microsserviço a ser executado é o `integra-rj`. Já se for um contrato celebrado em `SC`, o microsserviço a ser executado é o `integra-sc`. 
 
