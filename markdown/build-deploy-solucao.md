@@ -48,7 +48,7 @@ sudo make build-start
 
 :loudspeaker: O primeiro build e deploy é sempre mais demorado por precisar baixar todas as imagens necessárias.
 
-3. Verificar se a solução está rodando
+5. Verificar se a solução está rodando
 
 ```
 docker ps
@@ -57,5 +57,11 @@ docker ps
 <img src="/imagens/build-start-sucesso.png">
 
 :point_right: Além dos containers dos microsserviços e do localstack, temos o container do _mockoon_ (https://mockoon.com/), que é a nossa solução de mock para REST API para simular o sistema dos estados.
+
+6. Verificar se os microsserviços (springboot) `integra-rj` e `integra-sc` foram inicializados com sucesso. 
+
+```
+make show-logs
+```
 
 :loudspeaker: Se tudo estiver ok, a solução estará pronta para ser testada no _postman_.
