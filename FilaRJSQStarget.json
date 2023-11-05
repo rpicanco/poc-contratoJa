@@ -1,6 +1,6 @@
 {
     "Rule": "estado-rj",
-    "EventBusName": "core",
+    "EventBusName": "contratos",
     "Targets": [{
             "Id": "1",
             "Arn": "arn:aws:sqs:us-east-1:000000000000:fila-rj",

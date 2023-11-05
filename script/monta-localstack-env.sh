@@ -1,6 +1,6 @@
 ## Lambda
 
-# 1 - Criar a policy, role e associar a policy a role para dar permissão para a Lambda publicar no barramento do Event Bridge core
+# 1 - Criar a policy, role e associar a policy a role para dar permissão para a Lambda publicar no barramento do Event Bridge contratos
 
 awslocal iam create-policy \
 	--policy-name LambdaEventBridgeExecutionPolicy \

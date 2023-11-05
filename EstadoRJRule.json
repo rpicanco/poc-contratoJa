@@ -1,6 +1,6 @@
 {
     "Name": "estado-rj",
-	"EventBusName": "core",
+	"EventBusName": "contratos",
     "EventPattern": "{\"source\": [\"com.contratoja.contrato\"],\"detail-type\": [\"contratoJa.contrato.ContratoCriado\"],\"detail\": {\"data\": {\"uf\": [\"RJ\"]}}}",    
     "State": "ENABLED"
 }
