@@ -10,7 +10,7 @@ async function sendEvent(eventContrato) {
                 {
                     Source: "com.contratoja.contrato",
                     DetailType: eventContrato.type,
-                    EventBusName: "core",
+                    EventBusName: "contratos",
                     Detail: JSON.stringify(JSON.parse(eventContrato))
                 },
               ]   
