@@ -6,7 +6,7 @@ Testar e validar a solução através da coleção do _Postman_. É necessário 
 
 ## Teste
 
-1. Importe no <a href="/postman/" rel="some text"><img src="/imagens/icone-postman.png" alt="Postman" width="70" height="50" /></a> a coleção **Poc contratoJa.postman_collection.json** e variável de ambiente **Localstack.postman_environment.json** da pasta _postman_ do projeto. 
+1. Importe no <a href="/postman/" rel="some text"><img src="/imagens/icone-postman.png" vertical-align: bottom alt="Postman" width="70" height="50" /></a> a coleção **Poc contratoJa.postman_collection.json** e variável de ambiente **Localstack.postman_environment.json** da pasta _postman_ do projeto. 
 
 2. No terminal, recupere o `rest-api-id` gerado na criação do AWS API Gateway de contrato no _localstack_.
 
