@@ -34,7 +34,7 @@ docker ps
 
 :loudspeaker: Aguarde o status do container ficar: **Up XX seconds (healthy)**.
 
-3. Montar toda a stack necessária com os serviços da AWS utilizando o **Localstack** através do _Make_
+3. Montar toda a stack necessária com os serviços da AWS utilizando o **Localstack**
 
 ```
 sudo make monta-localstack-env

@@ -6,9 +6,9 @@ Testar e validar a solução através da coleção do _Postman_. É necessário 
 
 ## Teste
 
-1. Importe no **postman** a coleção _Poc contratoJa.postman_collection.json_ e variável de ambiente _Localstack.postman_environment.json_ da pasta _postman_. 
+1. Importe no **Postman** a coleção **Poc contratoJa.postman_collection.json** e variável de ambiente **Localstack.postman_environment.json** da pasta _postman_ do projeto. 
 
-2. No terminal, recuperar o `rest-api-id` gerado na criação do AWS API Gateway de contrato.
+2. No terminal, recupere o `rest-api-id` gerado na criação do AWS API Gateway de contrato no _localstack_.
 
 ```
 sudo make get-rest-api-id
@@ -32,7 +32,7 @@ sudo make get-rest-api-id
 
 ### Cenário 1: Contrato celebrado no RJ
 
-1. Execute o comando a seguir alterando o `NUMERO_CONTRATO` criado na resposta da requisição do _POST Criar contrato RJ_ 
+1. Execute o comando a seguir alterando o `NUMERO_CONTRATO` gerado na resposta da requisição do _POST Criar contrato RJ_ no _postman_ 
 
 ```
 make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUMERO_CONTRATO\] ID do registro do sistema do estado RJ'
@@ -41,9 +41,9 @@ make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUM
 :heavy_check_mark: Se apareceu o texto, sucesso.
 
 
-### Cenário 2: Contrato celebrado no SC
+### Cenário 2: Contrato celebrado em SC
 
-1. Execute o comando a seguir alterando o `NUMERO_CONTRATO` criado na resposta da requisição do _POST Criar contrato SC_ 
+1. Execute o comando a seguir alterando o `NUMERO_CONTRATO` gerado na resposta da requisição do _POST Criar contrato SC_ no _postman_ 
 
 ```
 make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUMERO_CONTRATO\] ID do registro do sistema do estado SC'

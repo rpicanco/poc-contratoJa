@@ -158,6 +158,6 @@ pip install awscli-local
 > https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal
 >
                           
-### Ambiente de execução
+### Ambiente de execução da PoC
 
 <img src="/imagens/ambiente-execucao.png">

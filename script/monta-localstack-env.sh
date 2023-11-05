@@ -75,10 +75,10 @@ awslocal sqs create-queue \
 
 ## EventBridge
 
-# 10 - Criar o barramento core no EventBridge
+# 10 - Criar o barramento contratos no EventBridge
 
 awslocal events create-event-bus \
-	--name core
+	--name contratos
 
 # 11 - Criar as regras para cada estado
 

@@ -1,6 +1,6 @@
 <h1>ContratoJá</h1>
 
-> :watch: Tempo estimado de execução: 15 minutos.
+> :watch: Tempo estimado de execução: 30 minutos.
 
 ### Passos
 
