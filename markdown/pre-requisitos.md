@@ -15,7 +15,7 @@
 :heavy_check_mark: [AWS CLI local](#awscli-local)
 
 >
-> **Note**:
+> **Nota**:
 > 
 > Clique <a href="para-usuarios-windows.md">aqui</a> para usuários do sistema operacional _Windows_
 > 
@@ -33,7 +33,6 @@ sudo apt-get update
 ```
 sudo apt-get install ca-certificates curl gnupg
 ```
-**Do you want to continue? [Y/n]** y
 	
 ```
 sudo install -m 0755 -d /etc/apt/keyrings
