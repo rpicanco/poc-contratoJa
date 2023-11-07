@@ -142,15 +142,29 @@ sudo apt install python3-pip
 ```
 **Do you want to continue? [Y/n]** y
 
-### AWS CLI local
+### AWS CLI e AWS CLI local
 
-1. Instalar o AWS CLI local
+1. Instalar o AWS CLI
+
+```
+pip install awscli
+```
+
+2. Instalar o AWS CLI local
 
 ```
 pip install awscli-local
 ```
 
-2. Copiar a pasta `.aws` com os arquivos `config.txt` e `credentials.txt` na pasta _/home/<<seu_usuário>>/_
+3. Copiar a pasta `.aws` com os arquivos `config.txt` e `credentials.txt` na pasta _/home/<<seu_usuário>>/_
+
+4. Verificar a instalação executando o comando a seguir:
+
+```
+awslocal kinesis list-streams
+```
+
+:loudspeaker: Como resultado do comando, aparecerá uma lista vazia de stream.
 
 >
 > **Referência**:
