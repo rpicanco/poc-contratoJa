@@ -11,7 +11,7 @@ Testar e validar a solução através da coleção do _Postman_. É necessário 
 2. No terminal, recupere o `rest-api-id` gerado na criação do AWS API Gateway de contrato no _localstack_.
 
 ```
-sudo make get-rest-api-id
+make get-rest-api-id
 ```
 
 3. Com o `rest-api-id`, atualize a variável de ambiente no _postman_ `REST_API_ID`.
@@ -35,7 +35,7 @@ sudo make get-rest-api-id
 1. Execute o comando a seguir alterando o `NUMERO_CONTRATO` gerado na resposta da requisição do _POST Criar contrato RJ_ no _postman_ 
 
 ```
-make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUMERO_CONTRATO\] ID do registro do sistema do estado RJ'
+sudo make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUMERO_CONTRATO\] ID do registro do sistema do estado RJ'
 ```
 
 :heavy_check_mark: Se apareceu o texto, sucesso.
@@ -47,7 +47,7 @@ make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUM
 1. Execute o comando a seguir alterando o `NUMERO_CONTRATO` gerado na resposta da requisição do _POST Criar contrato SC_ no _postman_ 
 
 ```
-make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUMERO_CONTRATO\] ID do registro do sistema do estado SC'
+sudo make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUMERO_CONTRATO\] ID do registro do sistema do estado SC'
 ```
 
 :heavy_check_mark: Se apareceu o texto, sucesso.
@@ -59,5 +59,5 @@ make show-logs | grep 'Contrato registrado com sucesso!!! Número contrato \[NUM
 :loudspeaker: Após a validação, se desejar remover os containers criados, execute o comando a seguir.
 
 ```
-make destroy
+sudo make destroy
 ```

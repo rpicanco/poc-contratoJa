@@ -51,7 +51,7 @@ sudo make build-start
 5. Verificar se a solução está rodando
 
 ```
-docker ps
+sudo docker ps
 ```
 
 <img src="/imagens/build-start-sucesso.png">
@@ -61,7 +61,7 @@ docker ps
 6. Verificar se os microsserviços (springboot) `integra-rj` e `integra-sc` foram inicializados com sucesso. 
 
 ```
-make show-logs
+sudo make show-logs
 ```
 
 :loudspeaker: Se tudo estiver ok, a solução estará pronta para ser testada no _postman_.
