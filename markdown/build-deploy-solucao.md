@@ -37,7 +37,7 @@ sudo docker ps
 3. Montar toda a stack necessária com os serviços da AWS utilizando o **Localstack**
 
 ```
-sudo make monta-localstack-env
+make monta-localstack-env
 ```
 
 4. Construir e deployar os microserviços `integra-rj` e `integra-sc`.

@@ -2,6 +2,8 @@
 
 :heavy_check_mark: [Sistema operacional Linux](#sistema-operacional-linux)
 
+:heavy_check_mark: [Java 17](#java)
+
 :heavy_check_mark: [Docker](#docker)
 
 :heavy_check_mark: [Docker Compose](#docker-compose)
@@ -21,6 +23,25 @@
 > 
 
 ## Sistema operacional Linux 
+
+### Java 17
+
+1. Instalar o Java 17
+
+```
+sudo apt update
+```
+
+```
+sudo apt install openjdk-17-jdk
+```
+**Do you want to continue? [Y/n]** y
+
+2. Aguarde um tempinho e verifique se a instalação do java 17 está ok
+
+```
+java –version
+```
 
 ### Docker
 
