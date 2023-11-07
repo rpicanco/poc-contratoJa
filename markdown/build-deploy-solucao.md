@@ -29,7 +29,7 @@ sudo make start-localstack
 2. Verifique se o container do localstack foi inicializado com sucesso
 
 ```
-docker ps
+sudo docker ps
 ```
 
 :loudspeaker: Aguarde o status do container ficar: **Up XX seconds (healthy)**.

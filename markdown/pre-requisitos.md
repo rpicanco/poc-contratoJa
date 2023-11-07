@@ -140,6 +140,7 @@ sudo apt update
 ```
 sudo apt install python3-pip
 ```
+**Do you want to continue? [Y/n]** y
 
 ### AWS CLI local
 
