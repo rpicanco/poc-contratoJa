@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Prova de conceito referente ao artigo "Simplificando e reduzindo o custo da solução com a Arquitetura Orientada a Eventos" publicado no Medium.
+Prova de conceito (_PoC_) referente ao artigo [Simplificando e reduzindo o custo da solução com a Arquitetura Orientada a Eventos](https://medium.com/@robpicanco/simplificando-e-reduzindo-o-custo-da-solu%C3%A7%C3%A3o-com-a-arquitetura-orientada-a-eventos-460a4169a47c) publicado no _Medium_.
 
 ## Execução
 
