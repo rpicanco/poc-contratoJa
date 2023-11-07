@@ -179,13 +179,15 @@ pip install awscli-local
 
 3. Copiar a pasta `.aws` com os arquivos `config.txt` e `credentials.txt` na pasta _/home/<<seu_usuário>>/_
 
-4. Verificar a instalação executando o comando a seguir:
+4. Reinicie o Ubuntu;
+
+5. Verificar a instalação executando o comando a seguir:
 
 ```
-awslocal kinesis list-streams
+awslocal sqs list-queues
 ```
 
-:loudspeaker: Como resultado do comando, aparecerá uma lista vazia de stream.
+:loudspeaker: Como resultado do comando, aparecerá `Could not connect to the endpoint URL: "http://localhost:4566/"`. Isso valida a instalação e configuração do _awslocal_, apesar de não termos iniciarmos o container do _localstack_ ainda. 
 
 >
 > **Referência**:
