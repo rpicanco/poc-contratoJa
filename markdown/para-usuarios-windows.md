@@ -18,7 +18,7 @@ wsl --install
 
 3. Informe o nome do usuário e senha que você utilizará no _Linux_
 
-<a href="/imagens/instalacao-ubuntu-no-windows-sucesso.png"></a>
+<img src="/imagens/instalacao-ubuntu-no-windows-sucesso.png">
 
 4. Reinicie o sistema operacional _Windows_
 
