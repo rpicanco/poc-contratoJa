@@ -7,8 +7,20 @@ Caso você está usando o sistema operacional _Windows_, você pode rodar um amb
 1. No Powershell (como administrador), execute o comando a seguir:
 
 ```
-wsl --install -d Ubuntu
+wsl --update
 ```
+
+2. Com o WSL2 instalado, execute o comando a seguir para instalar a distribuição Linux default (_Ubuntu_): 
+
+```
+wsl --install
+```
+
+3. Informe o nome do usuário e senha que você utilizará no _Linux_
+
+<a href="/imagens/instalacao-ubuntu-no-windows-sucesso.png"></a>
+
+4. Reinicie o sistema operacional _Windows_
 
 :loudspeaker: Dependendo da versão do seu o sistema operacional _Windows_, a forma de instalação é diferente. Ver nas referências abaixo. 
 
@@ -18,10 +30,8 @@ wsl --install -d Ubuntu
 > https://learn.microsoft.com/pt-br/windows/wsl/install
 >
 
-### Configure um usuário e senha para o ambiente Linux (Ubuntu)
+### Inicie o Ubuntu no Windows
 
-1. Se a tela do terminal do Ubuntu não aparecer automaticamente, no botão _windows_, vá em **Iniciar** -> **Ubuntu**
+1. Clique no botão _windows_, vá em **Iniciar** -> **Ubuntu**
 
-2. Aguarde um instante e aparecerá a opção para você definir um usuário e senha.
-
-:loudspeaker: Após a definição do usuário e senha, o terminal de comando do Linux ficará disponível para você executar os comandos.
+2. Aguarde um instante e o terminal de comando do Linux ficará disponível para você executar os comandos.
